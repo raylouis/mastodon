@@ -13,8 +13,10 @@ module Admin
 
     def show
       authorize @account, :show?
+
       @account_moderation_note = current_account.account_moderation_notes.new(target_account: @account)
-      @moderation_notes = @account.targeted_moderation_notes.latest
+      @moderation_notes        = @account.targeted_moderation_notes.latest
+      @warnings                = @account.targeted_account_warnings
     end
 
     def subscribe

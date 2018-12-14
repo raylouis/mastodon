@@ -922,6 +922,22 @@ en:
       explanation: You requested a full backup of your Mastodon account. It's now ready for download!
       subject: Your archive is ready for download
       title: Archive takeout
+    warning:
+      explanation:
+        disable: You have been locked out of your account. Your login sessions and app tokens are still intact, but you cannot perform any actions until your account is unlocked.
+        silence: While your account is quarantined, only people who are already following you will see your toots on this server.
+        suspend: Your account and all of your toots and media attachments have been removed.
+      review_server_policies: Review server policies
+      subject:
+        disable: Your account has been disabled
+        none: Warning
+        silence: Your account has been quarantined
+        suspend: Your account has been deleted
+      title:
+        disable: Account disabled
+        none: Warning
+        silence: Account quarantined
+        suspend: Account deleted
     welcome:
       edit_profile_action: Setup profile
       edit_profile_step: You can customize your profile by uploading an avatar, header, changing your display name and more. If you’d like to review new followers before they’re allowed to follow you, you can lock your account.

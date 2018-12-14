@@ -14,6 +14,7 @@ module Admin
 
       @report_note  = @report.notes.new
       @report_notes = (@report.notes.latest + @report.history).sort_by(&:created_at)
+      @warnings     = @report.target_account.targeted_account_warnings
       @form         = Form::StatusBatch.new
     end
 

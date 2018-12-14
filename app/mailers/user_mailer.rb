@@ -78,4 +78,14 @@ class UserMailer < Devise::Mailer
       mail to: @resource.email, subject: I18n.t('user_mailer.backup_ready.subject')
     end
   end
+
+  def warning(user, warning)
+    @resource = user
+    @warning  = warning
+    @instance = Rails.configuration.x.local_domain
+
+    I18n.with_locale(@resource.locale || I18n.default_locale) do
+      mail to: @resource.email, subject: I18n.t("user_mailer.warning.subject.#{@warning.action}")
+    end
+  end
 end
