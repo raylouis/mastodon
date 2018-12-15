@@ -37,7 +37,7 @@ class MastodonMount extends React.Component {
   render () {
     const { showIntroduction } = this.props;
 
-    if (showIntroduction) {
+    if (true || showIntroduction) {
       return <Introduction />;
     }
 
